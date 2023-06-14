@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <padding android:top="10dp" android:right="10dp" android:left="10dp" android:bottom="10dp" />
+            <corners android:topLeftRadius="10dp" android:bottomLeftRadius="10dp" android:bottomRightRadius="10dp" android:topRightRadius="10dp" />
+            <solid android:color="#DAD1D7FD" />
+        </shape>
+    </item>
+    <item
+        android:drawable="@drawable/male_doctor"
+        android:gravity="bottom|start"
+        android:width="140dp"
+        android:height="170dp"
+        android:bottom="-10dp"
+        android:top="40dp" />
+</layer-list>

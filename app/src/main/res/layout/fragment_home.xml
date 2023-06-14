@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBE5FF"
+    android:orientation="vertical"
+    tools:context=".HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/backgroud_header"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/Username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/hello_muhammad_ahsan"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/refer_friends_get_rs_100_cashback"
+                android:textColor="#F3F2F2"
+                android:textSize="14sp" />
+
+            <ImageButton
+                android:id="@+id/referalLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/purple"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+
+        <com.csharpui.myloginform.TypeWriter
+            android:id="@+id/searchbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/searchbtn"
+            android:drawableStart="@drawable/ic_baseline_search_16"
+            android:drawablePadding="12dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/search_for_a_doctor"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:theme="@style/TransparentScrollBarStyle">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/welcome_bkg"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/welcome"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/welcome_message"
+                    android:textColor="@color/Accent"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/BookAppointment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="80dp"
+                    android:background="@drawable/btn_book"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_ios_24"
+                    android:drawablePadding="15dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingHorizontal="20sp"
+                    android:text="@string/book_now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_background"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/DoctorAppointment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15sp"
+                        android:layout_weight="1"
+                        android:background="@drawable/doctor_appointementcard"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:lineHeight="18sp"
+                            android:text="@string/doctor_nappointment"
+                            android:textColor="@color/purple_700"
+                            android:textSize="14sp"
+                            tools:targetApi="p" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/DoctorVideoAppointment"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/online_consultationcard"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:lineHeight="18sp"
+                            android:text="@string/video_nconsultation"
+                            android:textColor="#232323"
+                            android:textSize="14sp"
+                            tools:targetApi="p" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/TeethTest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/teeth_testcard"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:lineHeight="18sp"
+                        android:text="@string/ai_teeth_ndisease_test"
+                        android:textAlignment="textEnd"
+                        android:textColor="#2020E8"
+                        android:textSize="18sp"
+                        tools:targetApi="p" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+                        android:drawablePadding="15dp"
+                        android:drawableTint="#2020E8"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/using_our_new_ai_model"
+                        android:textAlignment="textEnd"
+                        android:textColor="#2020E8"
+                        android:textSize="14sp"
+                        tools:ignore="UseCompatTextViewDrawableXml"
+                        tools:targetApi="p" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_background"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/need_help"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/in_case_of_any_issues_feel_free_to_talk_our_customer_support"
+                    android:textColor="@color/Accent"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/btn_callnow"
+                    android:drawableStart="@drawable/ic_baseline_call_16"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/purple"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:paddingHorizontal="20sp"
+                    android:text="@string/call_us_now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/purple"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

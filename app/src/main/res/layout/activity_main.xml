@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F5F5"
+    android:orientation="vertical"
+    tools:context="com.csharpui.myloginform.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/first_line"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/white_line" />
+
+        <View
+            android:id="@+id/second_line"
+            android:layout_width="20dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/first_line"
+            android:background="@drawable/purple_line" />
+
+        <View
+            android:id="@+id/third_line"
+            android:layout_width="20dp"
+            android:layout_height="250dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/second_line"
+            android:background="@drawable/white_line" />
+
+        <View
+            android:id="@+id/fourth_line"
+            android:layout_width="20dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/third_line"
+            android:background="@drawable/purple_line" />
+
+        <View
+            android:id="@+id/fifth_line"
+            android:layout_width="20dp"
+            android:layout_height="220dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/fourth_line"
+            android:background="@drawable/lightpurple_color" />
+
+        <View
+            android:id="@+id/sixth_line"
+            android:layout_width="20dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/fifth_line"
+            android:background="@drawable/white_line" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:gravity="center">
+        <!--        <TextView-->
+        <!--            android:id="@+id/a"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            android:text="A"-->
+        <!--            android:textColor="#fff"-->
+        <!--            android:textSize="150sp"-->
+        <!--            app:fontFamily="@font/baloo" />-->
+        <ImageView
+            android:id="@+id/dmsLogo"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/dmslogo" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+        <TextView
+            android:id="@+id/tagLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:text="Dental Management System"
+            android:textColor="#8A8585"
+            android:textSize="24sp"
+            app:fontFamily="@font/poppins_medium" />
+    </RelativeLayout>
+</LinearLayout>

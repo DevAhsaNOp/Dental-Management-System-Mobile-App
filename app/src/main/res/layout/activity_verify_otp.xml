@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".VerifyOtp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40sp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30sp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/dmsLogo"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10sp"
+            android:contentDescription="@string/logo"
+            android:src="@drawable/dmslogo" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/verify_otp"
+            android:textColor="@color/purple"
+            android:textSize="24sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/we_have_send_you_6_digits_otp_on_your_email"
+            android:textColor="@color/lightPurple"
+            android:textSize="14sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/userEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/lightPurple"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/otpText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:autofillHints="no"
+            android:background="@drawable/edtdesign"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="@string/enter_your_otp"
+            android:inputType="number|none"
+            android:maxLength="6"
+            android:digits="0123456789"
+            android:minHeight="48dp"
+            android:textColor="#000"
+            android:textColorHint="#546E7A"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/resendOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="35sp"
+            android:fontFamily="@font/poppins_medium"
+            android:onClick="ResendOTP"
+            android:text="@string/resend_verification_code"
+            android:textColor="@color/purple" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/wave"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/SignUpBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="25sp"
+            android:background="@drawable/btndesign"
+            android:backgroundTint="#fff"
+            android:fontFamily="@font/poppins_medium"
+            android:text="@string/sign_up"
+            android:textAllCaps="false"
+            android:textColor="@color/purple"
+            android:textSize="16sp" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/logintext"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginHorizontal="20dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:fontFamily="@font/poppins_semibold"-->
+<!--            android:onClick="Reg_Click"-->
+<!--            android:text="@string/already_a_user_login"-->
+<!--            android:textColor="@color/white" />-->
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".reg_frag1">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="200sp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="200sp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10sp"
+            android:scaleType="fitXY"
+            android:src="@drawable/horse"
+            app:srcCompat="@drawable/dmslogo" />
+        <EditText
+            android:id="@+id/loginemailtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="7sp"
+            android:background="@drawable/edtdesign"
+            android:fontFamily="@font/robotomedium"
+            android:hint="Enter Your Email "
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/loginpasstext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="7sp"
+            android:background="@drawable/edtdesign"
+            android:fontFamily="@font/robotomedium"
+            android:hint="Enter Your Password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/loginbutton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btndesign"
+            android:backgroundTint="#6777ef"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="#ffff" />
+
+    </LinearLayout>
+
+</FrameLayout>

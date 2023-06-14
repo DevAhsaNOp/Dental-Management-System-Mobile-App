@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShareFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EBE5FF"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/upload_your_teeth_images"
+            android:fontFamily="@font/poppins_semibold"
+            android:layout_marginTop="5sp"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textAlignment="center"
+            android:textAllCaps="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:background="#F2EFFF"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/ChooseImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="20dp"
+                android:background="#D6B5FF">
+
+                <View
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_baseline_photo_camera_24" />
+            </RelativeLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#EBE5FF"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppinsbold"
+                android:padding="10dp"
+                android:text="@string/your_personal_details"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/Fullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="7sp"
+            android:autofillHints="no"
+            android:background="@drawable/edtdesign"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="@string/enter_first_name"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:enabled="false"
+            android:textColor="@color/black"
+            android:textColorHint="#546E7A"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/Phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="7sp"
+            android:autofillHints="no"
+            android:background="@drawable/edtdesign"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="@string/enter_phone_number"
+            android:inputType="phone"
+            android:enabled="false"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            android:textColorHint="#546E7A"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="7sp"
+            android:autofillHints="no"
+            android:background="@drawable/edtdesign"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="@string/enter_your_email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:enabled="false"
+            android:textColor="@color/black"
+            android:textColorHint="#546E7A"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/City"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="7sp"
+            android:autofillHints="no"
+            android:background="@drawable/edtdesign"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="@string/your_city"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:enabled="false"
+            android:textColor="@color/black"
+            android:textColorHint="#546E7A"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/Gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="7sp"
+            android:autofillHints="no"
+            android:background="@drawable/edtdesign"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="@string/gender"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:enabled="false"
+            android:textColor="@color/black"
+            android:textColorHint="#546E7A"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/UploadBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/edtdesign"
+        android:backgroundTint="@color/purple"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/start_test"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+</RelativeLayout>
