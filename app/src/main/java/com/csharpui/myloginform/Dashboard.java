@@ -14,6 +14,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -66,9 +68,11 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         sharedPreferences = getSharedPreferences("LoginFile", MODE_PRIVATE);
         boolean isLoggedIn = sharedPreferences.getString("isLoggedIn","").equals("true");
 
-        if (isLoggedIn) {
+        if (isLoggedIn && getSupportFragmentManager().getBackStackEntryCount() > 0) {
             // User is logged in, prevent going back to LoginActivity
-            moveTaskToBack(true); // Move the task to the back of the activity stack
+            // moveTaskToBack(true); // Move the task to the back of the activity stack
+            // Pop the top fragment from the back stack
+            getSupportFragmentManager().popBackStack();
         } else {
             super.onBackPressed(); // Allow going back to LoginActivity if not logged in
         }
@@ -77,19 +81,34 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
         switch (item.getItemId()) {
-            case R.id.nav_home:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+            case R.id.nav_home:{
+                fragmentTransaction.replace(R.id.fragment_container, new HomeFragment());
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
                 break;
-            case R.id.nav_settings:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
+            }
+            case R.id.nav_settings:{
+                fragmentTransaction.replace(R.id.fragment_container, new SettingsFragment());
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
                 break;
-            case R.id.nav_share:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ShareFragment()).commit();
+            }
+            case R.id.nav_share:{
+                fragmentTransaction.replace(R.id.fragment_container, new ShareFragment());
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
                 break;
-            case R.id.nav_about :
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new DoctorList()).commit();
+            }
+            case R.id.nav_about :{
+                fragmentTransaction.replace(R.id.fragment_container, new DoctorList());
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
                 break;
+            }
             case R.id.nav_logout:
                 Toast.makeText(this, "Logout!", Toast.LENGTH_SHORT).show();
                 logout();
