@@ -1,6 +1,7 @@
 package com.csharpui.myloginform;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -42,6 +43,11 @@ public class HomeFragment extends Fragment {
         DoctorVideoAppointment = view.findViewById(R.id.DoctorVideoAppointment);
 
         sharedPreferences = requireContext().getSharedPreferences("LoginFile", Context.MODE_PRIVATE);
+
+        //Set Nav Menu Item
+        Activity activity = getActivity();
+        NavigationView navigationView = activity.findViewById(R.id.nav_view);
+        navigationView.setCheckedItem(R.id.nav_home);
 
         String userData = sharedPreferences.getString("userDetails", "");
         editor = sharedPreferences.edit();

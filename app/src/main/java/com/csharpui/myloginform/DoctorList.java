@@ -1,5 +1,6 @@
 package com.csharpui.myloginform;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.navigation.NavigationView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -58,6 +60,11 @@ public class DoctorList extends Fragment implements MyAdapter.OnItemClickListene
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         apiResponseData = new ArrayList<>();
+
+        //Set Nav Menu Item
+        Activity activity = getActivity();
+        NavigationView navigationView = activity.findViewById(R.id.nav_view);
+        navigationView.setCheckedItem(R.id.nav_about);
 
         // Initialize the RequestQueue
         requestQueue = Volley.newRequestQueue(getContext());

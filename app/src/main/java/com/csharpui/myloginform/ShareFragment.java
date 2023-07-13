@@ -39,6 +39,7 @@ import com.cloudinary.android.MediaManager;
 import com.cloudinary.android.callback.ErrorInfo;
 import com.cloudinary.android.callback.UploadCallback;
 import com.cloudinary.utils.ObjectUtils;
+import com.google.android.material.navigation.NavigationView;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -115,6 +116,10 @@ public class ShareFragment extends Fragment {
         City = view.findViewById(R.id.City);
         Gender = view.findViewById(R.id.Gender);
 
+        //Set Nav Menu Item
+        Activity activity = getActivity();
+        NavigationView navigationView = activity.findViewById(R.id.nav_view);
+        navigationView.setCheckedItem(R.id.nav_share);
 
         progressDialog = new ProgressDialog(getContext());
         progressDialog.setMessage("Please wait...");

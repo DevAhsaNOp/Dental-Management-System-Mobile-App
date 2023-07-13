@@ -1,6 +1,7 @@
 package com.csharpui.myloginform;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -36,6 +37,7 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.navigation.NavigationView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -78,6 +80,11 @@ public class SettingsFragment extends Fragment {
 
         String userData = sharedPreferences.getString("userDetails", "");
         editor = sharedPreferences.edit();
+
+        //Set Nav Menu Item
+        Activity activity = getActivity();
+        NavigationView navigationView = activity.findViewById(R.id.nav_view);
+        navigationView.setCheckedItem(R.id.nav_settings);
 
         progressDialog = new ProgressDialog(getContext());
         progressDialog.setMessage("Please wait...");
