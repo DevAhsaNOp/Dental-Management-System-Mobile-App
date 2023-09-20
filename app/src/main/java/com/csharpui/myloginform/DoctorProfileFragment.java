@@ -89,7 +89,7 @@ public class DoctorProfileFragment extends Fragment {
     }
 
     private void getDoctorDetails(String doctorID) {
-        String url = "https://dmswebapi.bsite.net/api/Get/DoctorOfflineConsultaionDetails?DoctorID="+Integer.parseInt(doctorID);
+        String url = "https://dmswebapi.azurewebsites.net/api/Get/DoctorOfflineConsultaionDetails?DoctorID="+Integer.parseInt(doctorID);
 
         requestQueue.add(new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {

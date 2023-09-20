@@ -106,7 +106,7 @@ public class DoctorList extends Fragment implements MyAdapter.OnItemClickListene
     }
 
     private void getDoctorDetails() {
-        String url = "https://dmswebapi.bsite.net/api/Get/AllDoctors";
+        String url = "https://dmswebapi.azurewebsites.net/api/Get/AllDoctors";
         progressDialog = new ProgressDialog(getContext());
         progressDialog.setMessage("Please wait...");
         progressDialog.show();

@@ -113,7 +113,7 @@ public class LoginActivity1 extends AppCompatActivity {
         progressDialog1.setMessage("Please wait...");
         progressDialog1.show();
 
-        String baseURL = "https://dmswebapi.bsite.net/api/login";
+        String baseURL = "https://dmswebapi.azurewebsites.net/api/login";
         RequestQueue SQueue;
         RetryPolicy policy = new APICustomRetryPolicy();
         StringRequest jsonObjRequest = (StringRequest) new StringRequest(

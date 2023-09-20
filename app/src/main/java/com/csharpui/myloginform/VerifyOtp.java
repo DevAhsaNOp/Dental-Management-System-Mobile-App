@@ -73,7 +73,7 @@ public class VerifyOtp extends AppCompatActivity {
         progressDialog1.show();
         RequestQueue SQueue;
         SQueue = Volley.newRequestQueue(this);
-        SQueue.add(HTTPReq.getRequest("https://dmswebapi.bsite.net/api/Send/OTP?Email=" +
+        SQueue.add(HTTPReq.getRequest("https://dmswebapi.azurewebsites.net/api/Send/OTP?Email=" +
                         userEmail.getText().toString(),
                 new VolleyCallback() {
                     @Override
@@ -110,7 +110,7 @@ public class VerifyOtp extends AppCompatActivity {
         progressDialog1.setMessage("Please wait...");
         progressDialog1.show();
 
-        String baseURL = "https://dmswebapi.bsite.net/api/Register/Patient";
+        String baseURL = "https://dmswebapi.azurewebsites.net/api/Register/Patient";
         RequestQueue SQueue;
         RetryPolicy policy = new APICustomRetryPolicy();
         StringRequest jsonObjRequest = (StringRequest) new StringRequest(

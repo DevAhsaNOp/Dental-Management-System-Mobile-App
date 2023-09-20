@@ -227,7 +227,7 @@ public class SettingsFragment extends Fragment {
         RequestQueue mQueue;
         mQueue = Volley.newRequestQueue(getContext());
 
-        mQueue.add(HTTPReq.getRequest("https://dmswebapi.bsite.net/api/Get/City",
+        mQueue.add(HTTPReq.getRequest("https://dmswebapi.azurewebsites.net/api/Get/City",
                 new VolleyCallback() {
                     @Override
                     public void onSuccess(String result) {
@@ -265,7 +265,7 @@ public class SettingsFragment extends Fragment {
     }
 
     public void GetPatientDetails(int PatientID) {
-        String url = "https://dmswebapi.bsite.net/api/Get/Patient?PatientID=" + PatientID;
+        String url = "https://dmswebapi.azurewebsites.net/api/Get/Patient?PatientID=" + PatientID;
 
         RequestQueue SQueue;
         SQueue = Volley.newRequestQueue(getContext());
@@ -331,7 +331,7 @@ public class SettingsFragment extends Fragment {
         progressDialog1.setMessage("Please wait...");
         progressDialog1.show();
 
-        String baseURL = "https://dmswebapi.bsite.net/api/Update/Patient";
+        String baseURL = "https://dmswebapi.azurewebsites.net/api/Update/Patient";
         RequestQueue SQueue;
         RetryPolicy policy = new APICustomRetryPolicy();
         StringRequest jsonObjRequest = (StringRequest) new StringRequest(

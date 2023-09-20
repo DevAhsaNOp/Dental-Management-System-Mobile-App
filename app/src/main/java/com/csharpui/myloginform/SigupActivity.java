@@ -190,7 +190,7 @@ public class SigupActivity extends AppCompatActivity {
         RequestQueue mQueue;
         mQueue = Volley.newRequestQueue(this);
 
-        mQueue.add(HTTPReq.getRequest("https://dmswebapi.bsite.net/api/Get/City",
+        mQueue.add(HTTPReq.getRequest("https://dmswebapi.azurewebsites.net/api/Get/City",
                 new VolleyCallback() {
                     @Override
                     public void onSuccess(String result) {
@@ -228,7 +228,7 @@ public class SigupActivity extends AppCompatActivity {
     }
 
     public void IsEmailExist(String Email) {
-        String url = "https://dmswebapi.bsite.net/api/Check/EmailExist?Email=" + Email;
+        String url = "https://dmswebapi.azurewebsites.net/api/Check/EmailExist?Email=" + Email;
 
         RequestQueue SQueue;
         SQueue = Volley.newRequestQueue(this);
@@ -264,7 +264,7 @@ public class SigupActivity extends AppCompatActivity {
     public void IsNumberExist(String Number) {
         RequestQueue SQueue;
         SQueue = Volley.newRequestQueue(this);
-        SQueue.add(HTTPReq.getRequest("https://dmswebapi.bsite.net/api/Check/PhoneNumberExist?PhoneNumber=" + Number,
+        SQueue.add(HTTPReq.getRequest("https://dmswebapi.azurewebsites.net/api/Check/PhoneNumberExist?PhoneNumber=" + Number,
                 new VolleyCallback() {
                     @Override
                     public void onSuccess(String result) {
@@ -296,7 +296,7 @@ public class SigupActivity extends AppCompatActivity {
     public void SendOtp(String Email) {
         RequestQueue SQueue;
         SQueue = Volley.newRequestQueue(this);
-        SQueue.add(HTTPReq.getRequest("https://dmswebapi.bsite.net/api/Send/OTP?Email=" + Email,
+        SQueue.add(HTTPReq.getRequest("https://dmswebapi.azurewebsites.net/api/Send/OTP?Email=" + Email,
                 new VolleyCallback() {
                     @Override
                     public void onSuccess(String result) {

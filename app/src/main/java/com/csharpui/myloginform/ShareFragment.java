@@ -192,7 +192,7 @@ public class ShareFragment extends Fragment {
     }
 
     public void GetPatientDetails(int PatientID) {
-        String url = "https://dmswebapi.bsite.net/api/Get/Patient?PatientID=" + PatientID;
+        String url = "https://dmswebapi.azurewebsites.net/api/Get/Patient?PatientID=" + PatientID;
 
         RequestQueue SQueue;
         SQueue = Volley.newRequestQueue(getContext());
@@ -321,7 +321,7 @@ public class ShareFragment extends Fragment {
     }
 
     public void InsertPatientTest() {
-        String baseURL = "https://dmswebapi.bsite.net/api/Insert/PatientTest";
+        String baseURL = "https://dmswebapi.azurewebsites.net/api/Insert/PatientTest";
         RequestQueue SQueue;
         RetryPolicy policy = new APICustomRetryPolicy();
         StringRequest jsonObjRequest = (StringRequest) new StringRequest(
